@@ -1,5 +1,6 @@
 
-[![CI](https://github.com/farjs/blessed/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/farjs/blessed/actions/workflows/ci.yml?query=workflow%3Aci+branch%3Amain)
+[![CI](https://github.com/farjs/blessed/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/farjs/blessed/actions/workflows/ci.yml?query=workflow%3Aci+branch%3Amaster)
+[![npm version](https://img.shields.io/npm/v/@farjs/blessed)](https://www.npmjs.com/package/@farjs/blessed)
 
 # @farjs/blessed
 

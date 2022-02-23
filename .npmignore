@@ -2,7 +2,6 @@
 bin/
 browser/
 example/
-vendor/
 test/
 img/
 node_modules/
