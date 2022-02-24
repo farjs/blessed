@@ -8,7 +8,7 @@
       "url": "https://github.com/viktor-podzigun"
     }
   ],
-  "version": "0.1.0-SNAPSHOT",
+  "version": "0.2.1",
   "license": "MIT",
   "main": "./lib/blessed.js",
   "preferGlobal": false,
