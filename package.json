@@ -12,7 +12,13 @@
   "license": "MIT",
   "main": "./lib/blessed.js",
   "preferGlobal": false,
-  "repository": "git://github.com/farjs/blessed.git",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/farjs/blessed.git"
+  },
   "homepage": "https://github.com/farjs/blessed",
   "bugs": {
     "url": "http://github.com/farjs/blessed/issues"
