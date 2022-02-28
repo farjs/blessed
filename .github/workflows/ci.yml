@@ -35,10 +35,10 @@ jobs:
       run: |
         VERSION="$(echo "$TAG_NAME" | cut -d'v' -f 2)"
         echo "Publish a release version=$VERSION for tag $TAG_NAME"
-        npm --no-git-tag-version version $VERSION
+        npm --no-git-tag-version --allow-same-version version $VERSION
         npm pack
         echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > .npmrc
-        npm publish --access public farjs-blessed-${VERSION}.tgz
+        npm publish farjs-blessed-${VERSION}.tgz
       if: ${{ env.TAG_NAME != '' }}
       env:
         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

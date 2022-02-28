@@ -1,6 +1,7 @@
 
 [![CI](https://github.com/farjs/blessed/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/farjs/blessed/actions/workflows/ci.yml?query=workflow%3Aci+branch%3Amaster)
 [![npm version](https://img.shields.io/npm/v/@farjs/blessed)](https://www.npmjs.com/package/@farjs/blessed)
+[![Rate on Openbase](https://badges.openbase.com/js/rating/@farjs/blessed.svg)](https://openbase.com/js/@farjs/blessed?utm_source=embedded&utm_medium=badge&utm_campaign=rate-badge)
 
 # @farjs/blessed
 
