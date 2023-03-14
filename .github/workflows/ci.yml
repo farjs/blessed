@@ -2,6 +2,8 @@ name: CI
 
 on:
   push:
+    paths-ignore:
+      - '*.md'
     branches: [ master ]
     tags:
       - '*'
@@ -14,14 +16,14 @@ jobs:
     steps:
 
     - name: Git checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
       with:
         fetch-depth: 0
 
     - name: Setup Node.js
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v3
       with:
-        node-version: '12'
+        node-version: '16'
 
     - name: Extract Tag Name
       run: echo "TAG_NAME=$(echo ${GITHUB_REF##*/})" >> $GITHUB_ENV
