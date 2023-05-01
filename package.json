@@ -11,6 +11,7 @@
   "version": "0.2.0",
   "license": "MIT",
   "main": "./lib/blessed.js",
+  "types": "./index.d.ts",
   "preferGlobal": false,
   "publishConfig": {
     "access": "public"
@@ -44,5 +45,9 @@
     "transform": [
       "./browser/transform.js"
     ]
+  },
+  "devDependencies": {
+    "@types/blessed": "*",
+    "typescript": "^4.9.5"
   }
 }

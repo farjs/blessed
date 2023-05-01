@@ -1,0 +1,21 @@
+{
+  // see https://www.typescriptlang.org/tsconfig to better understand tsconfigs
+  "compilerOptions": {
+    "module": "node16",
+    "lib": ["ES6"],
+    "allowJs": true,
+    "checkJs": true,
+    "importHelpers": true,
+    "strict": true,
+    "useUnknownInCatchVariables": false,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+  }
+}
