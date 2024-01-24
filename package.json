@@ -8,11 +8,16 @@
       "url": "https://github.com/viktor-podzigun"
     }
   ],
-  "version": "0.2.0",
+  "version": "0.0.0",
+  "scripts": {
+    "lint": "quick-lint-js ./**/*.mjs ./**/*.ts",
+    "test": "tsc && bun test && node ./test/all.mjs"
+  },
   "license": "MIT",
   "main": "./lib/blessed.js",
   "types": "./index.d.ts",
   "preferGlobal": false,
+  "private": false,
   "publishConfig": {
     "access": "public"
   },
@@ -39,7 +44,8 @@
     "termcap"
   ],
   "engines": {
-    "node": ">= 0.8.0"
+    "node": ">= 0.8.0",
+    "bun": ">=0.8"
   },
   "browserify": {
     "transform": [
@@ -48,6 +54,7 @@
   },
   "devDependencies": {
     "@types/blessed": "*",
+    "quick-lint-js": "^3.0.0",
     "typescript": "^4.9.5"
   }
 }
