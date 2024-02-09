@@ -1,5 +1,10 @@
 import assert from "node:assert/strict";
-import { charWidth, isCombining, isSurrogate } from "../../lib/unicode.js";
+import {
+  charWidth,
+  isCombining,
+  isSurrogate,
+  strWidth,
+} from "../../lib/unicode.js";
 
 const { describe, it } = await (async () => {
   // @ts-ignore
@@ -18,12 +23,16 @@ describe("unicode.test.mjs", () => {
   const surrogateSingle = "𝌆";
   const double = "杜";
   const star = "⭐";
+  const complex = "👨‍👩‍👧‍👧";
+  const complex2 = "🤦🏼‍♂️";
   assert.deepEqual(combiningNonsurrogate.length, 2);
   assert.deepEqual(combiningSurrogate.length, 3);
   assert.deepEqual(surrogateDouble.length, 2);
   assert.deepEqual(surrogateSingle.length, 2);
   assert.deepEqual(double.length, 1);
   assert.deepEqual(star.length, 1);
+  assert.deepEqual(complex.length, 11);
+  assert.deepEqual(complex2.length, 7);
 
   it("should check for combining", () => {
     //when & then
@@ -80,5 +89,13 @@ describe("unicode.test.mjs", () => {
     assert.deepEqual(charWidth(surrogateSingle, 1), 0);
     assert.deepEqual(charWidth(double, 0), 2);
     assert.deepEqual(charWidth(star, 0), 1); //TODO: should be 2 !!!
+  });
+
+  it("should return string width", () => {
+    //when & then
+    assert.deepEqual(strWidth(""), 0);
+    assert.deepEqual(strWidth("0"), 1);
+    assert.deepEqual(strWidth(complex), 8);
+    assert.deepEqual(strWidth(complex2), 5);
   });
 });
