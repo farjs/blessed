@@ -78,6 +78,8 @@ describe("unicode.test.mjs", () => {
     //when & then
     assert.deepEqual(charWidth(0), 0);
     assert.deepEqual(charWidth("0", 0), 1);
+    assert.deepEqual(charWidth(1480), 0);
+    assert.deepEqual(charWidth(1488), 1);
     assert.deepEqual(charWidth(combiningNonsurrogate, 0), 1);
     assert.deepEqual(charWidth(combiningNonsurrogate, 1), 0);
     assert.deepEqual(charWidth(combiningSurrogate, 0), 1);
@@ -85,10 +87,10 @@ describe("unicode.test.mjs", () => {
     assert.deepEqual(charWidth(combiningSurrogate, 2), 0);
     assert.deepEqual(charWidth(surrogateDouble, 0), 2);
     assert.deepEqual(charWidth(surrogateDouble, 1), 0);
-    assert.deepEqual(charWidth(surrogateSingle, 0), 2); //TODO: should be 1 !!!
+    assert.deepEqual(charWidth(surrogateSingle, 0), 1);
     assert.deepEqual(charWidth(surrogateSingle, 1), 0);
     assert.deepEqual(charWidth(double, 0), 2);
-    assert.deepEqual(charWidth(star, 0), 1); //TODO: should be 2 !!!
+    assert.deepEqual(charWidth(star, 0), 2);
   });
 
   it("should return string width", () => {

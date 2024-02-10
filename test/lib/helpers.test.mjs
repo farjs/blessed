@@ -29,7 +29,7 @@ describe("helpers.test.mjs", () => {
     assert.deepEqual(dropUnicode("as̀"), "as");
     assert.deepEqual(dropUnicode("s̀b"), "sb");
     assert.deepEqual(dropUnicode("as̀b"), "asb");
-    assert.deepEqual(dropUnicode("as𐨁b"), "as?b"); //TODO: should be asb
+    assert.deepEqual(dropUnicode("as𐨁b"), "as?b");
     assert.deepEqual(dropUnicode("a🉐s̀杜b"), "a?s??b");
   });
 
@@ -55,7 +55,7 @@ describe("helpers.test.mjs", () => {
     assert.deepEqual(replace("as̀"), "as̀");
     assert.deepEqual(replace("s̀b"), "s̀b");
     assert.deepEqual(replace("as̀b"), "as̀b");
-    assert.deepEqual(replace("as𐨁b"), "as𐨁b"); //TODO: should be asb
+    assert.deepEqual(replace("as𐨁b"), "as𐨁b");
     assert.deepEqual(replace("a🉐s̀杜b"), "a🉐\x03s̀杜\x03b");
   });
 });
